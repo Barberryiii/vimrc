@@ -29,6 +29,8 @@ To install for multiple users, the repository needs to be cloned to a location a
 	
 Naturally, `/opt/vim_runtime` can be any directory, as long as all the users specified have read access.
 
+##Tips
+you should download plug in your .vim/autoload first.
 ## Fonts
 
 I recommend using [IBM Plex Mono font](https://github.com/IBM/plex) (it's an open-source and awesome font that can make your code beautiful). The Awesome vimrc is already setup to try to use it.
