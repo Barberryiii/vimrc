@@ -49,6 +49,20 @@ map <silent> <leader>b :TagbarToggle<cr>
 let g:neocomplete#enable_at_startup = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"tabular
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vmap <c--> :'<,'>Tabularize /--<cr>
+"vmap <c-=> :'<,'>Tabularize /=<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"indentLine
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:indentLine_noConcealCursor = 1
+let g:indentLine_color_term = 0
+let g:indentLine_char = '|'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  " Plugins will be downloaded under the specified directory.
