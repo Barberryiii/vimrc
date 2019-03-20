@@ -77,6 +77,9 @@ call plug#begin('~/.vim_runtime/my_plugins')
 "Declare the list of plugins.
 Plug 'ap/vim-buftabline'
 Plug 'majutsushi/tagbar'
-Plug 'Shougo/neocomplete.vim.git'
+Plug 'Shougo/neocomplete.vim'
+Plug 'godlygeek/tabular'
+Plug 'Yggdroot/indentLine'
+Plug 'rking/ag.vim'
 " List ends here. Plugins become visible to Vim after this callt.
 call plug#end()
