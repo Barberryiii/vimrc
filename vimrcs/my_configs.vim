@@ -10,6 +10,7 @@ set background=dark
 colorscheme  molokai "solarized
 set t_Co=256
 
+hi Normal ctermbg=234
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "use mouse
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -37,11 +38,11 @@ nnoremap <c-k> :bprev<cr>
 """"""""""""""""""""""""""""""
 autocmd vimenter * TagbarToggle 
 map <silent> <leader>b :TagbarToggle<cr>
- let g:tagbar_ctags_bin = 'ctags'
- let g:tagbar_left = 1
- let g:tagbar_width =20 
- let g:tagbar_autofocus =1 
- let g:tagbar_sort = 0
+let g:tagbar_ctags_bin = 'ctags'
+let g:tagbar_left = 0
+let g:tagbar_width = 23
+let g:tagbar_autofocus =1 
+let g:tagbar_sort = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "neocomplete
@@ -51,21 +52,27 @@ let g:neocomplete#enable_at_startup = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "tabular
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"vmap <c--> :'<,'>Tabularize /--<cr>
-"vmap <c-=> :'<,'>Tabularize /=<cr>
+vnoremap <c--> :'<,'>Tabularize /--<cr>
+vnoremap <c-=> :'<,'>Tabularize /=<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "indentLine
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:indentLine_noConcealCursor = 1
-let g:indentLine_color_term = 0
+let g:indentLine_color_term = 237
 let g:indentLine_char = '|'
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ag
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ag_working_path_mode="r"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  " Plugins will be downloaded under the specified directory.
+set nofixendofline  
+set ff=unix
 call plug#begin('~/.vim_runtime/my_plugins')
 "Declare the list of plugins.
 Plug 'ap/vim-buftabline'
