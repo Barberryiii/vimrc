@@ -7,15 +7,18 @@
 "colorschme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
-colorscheme  molokai "solarized
-set t_Co=256
+colorscheme  molokai "solarized set t_Co=256
 
 hi Normal ctermbg=234
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "use mouse
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=a
-
+map <leader>w :set ff=unix<cr>:w<cr>:e<cr>
+map nj 10j
+map mk 10k
+set fileformat=unix
+autocmd BufWritePre *.lua :set ff=unix
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set line number
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -30,8 +33,6 @@ map <leader>rr :source ~/.vimrc<cr>
 "buftabline
 """"""""""""""""""""""""""""""
 set hidden
-nnoremap <c-j> :bnext<cr>
-nnoremap <c-k> :bprev<cr>
 
 """"""""""""""""""""""""""""""
 "tagbar
@@ -44,6 +45,21 @@ let g:tagbar_width = 23
 let g:tagbar_autofocus =1 
 let g:tagbar_sort = 0
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"nerdtree-git-plugin
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ 
+}
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "neocomplete
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -72,7 +88,6 @@ let g:ag_working_path_mode="r"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  " Plugins will be downloaded under the specified directory.
 set nofixendofline  
-set ff=unix
 call plug#begin('~/.vim_runtime/my_plugins')
 "Declare the list of plugins.
 Plug 'ap/vim-buftabline'
