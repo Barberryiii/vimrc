@@ -62,7 +62,13 @@ ZSH_THEME="zys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump osx zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+    git
+    autojump
+    osx
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
 
 [[ -s /home/hejiaming/.autojump/etc/profile.d/autojump.sh  ]] && source /home/hejiaming/.autojump/etc/profile.d/autojump.sh
 

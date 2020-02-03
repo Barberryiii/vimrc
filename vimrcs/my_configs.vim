@@ -15,15 +15,14 @@ hi Normal ctermbg=234
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=a
 map <leader>w :set ff=unix<cr>:w<cr>:e<cr>
-map nj 10j
-map mk 10k
+map <space> 5j
 set fileformat=unix
 autocmd BufWritePre *.lua :set ff=unix
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set line number
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
-set relativenumber
+set relativenumber!
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "reset vim
@@ -57,11 +56,9 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Deleted"   : "✖",
     \ "Dirty"     : "✗",
     \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
-    \ 
-}
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"neocomplete
+    \ }       
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neocomplete#enable_at_startup = 1
 

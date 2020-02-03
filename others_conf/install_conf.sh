@@ -1,7 +1,7 @@
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 cd ~
 mkdir Plugin/
-cd ~/PLugin
+cd ~/Plugin
 git clone https://github.com/vim/vim.git
 echo "vim is installed"
 vim -c "PlugInstall" -c "q"
